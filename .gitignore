@@ -9,3 +9,5 @@ install-sh
 missing
 mkinstalldirs
 *.o
+examples/scribe_cat
+examples/scribe_ctrl

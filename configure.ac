@@ -15,6 +15,8 @@ AC_CONFIG_MACRO_DIR([aclocal])
 FB_INITIALIZE([localinstall])
 AC_PREFIX_DEFAULT([/usr/local])
 
+AM_PATH_PYTHON
+
 ############################################################################
 # User Configurable. Change With CAUTION!
 # User can include custom makefile rules. Uncomment and update only <name> in PRODUCT_MK.
@@ -77,6 +79,8 @@ AC_SUBST(BOOST_LIB)
 # Generates Makefile from Makefile.am. Modify when new subdirs are added.
 # Change Makefile.am also to add subdirectly.
 AC_CONFIG_FILES(Makefile src/Makefile lib/py/Makefile)
+AC_CONFIG_FILES([examples/scribe_cat examples/scribe_ctrl],
+                [chmod a+x examples/scribe_cat examples/scribe_ctrl])
 
 ############################################################################
 # DO NOT TOUCH.
